@@ -1,10 +1,11 @@
-import React from 'react'
-import SearchResultItem from './SearchResultItem'
+import React from 'react';
+import SearchResultItem from './SearchResultItem';
 
-export default function SearchResults() {
+export default function SearchResults(props) {
+    const {superheroData = []} = props;
     return (
         <div>
-            <SearchResultItem />
+            {superheroData.map(superhero => <SearchResultItem data = {superhero} /> )}
             
         </div>
         
